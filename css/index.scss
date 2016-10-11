@@ -1,0 +1,617 @@
+*{
+  padding:0;
+  margin:0;
+  list-style: none;
+  text-decoration: none;
+}
+body{
+  height:100%;
+  background: url(../img/bj2.jpg);
+}
+.top{
+  width:100%;
+  height:7%;
+  position: fixed;
+  top:0;
+  left:0;
+  background: rgba(0,0,0,0.8);
+  .t_l{
+    width:13%;
+    padding:5px;
+    float: left;
+    .tx{
+      width:35px;
+      display: inline-block;
+      height:35px;
+      vertical-align: middle;
+      border-radius: 50%;
+      background: url("../img/TX.jpg") no-repeat;
+      background-position: center center;
+      background-size: contain;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    .tx_name{
+      display: inline-block;
+      font-size: 12px;
+      color: #fff;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    .vip{
+      width:40px;
+      height:26px;
+      display: inline-block;
+      vertical-align: middle;
+      background:url("../img/vip .png") no-repeat;
+      background-size: contain;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+  .t_r{
+    height:100%;
+    float: left;
+    .search{
+      float: left;
+      padding-top: 10px;
+      div{
+        float: left;
+        margin-right: 20px;
+      }
+        .back{
+          width:30px;
+          height:30px;
+          background-size: contain;
+          background-image: url(../img/back.png);
+          &:hover{
+            cursor: pointer;
+          background-image: url(../img/backhover.png);
+          }
+        }
+        .shuaxin{
+          width:30px;
+          height:30px;
+          background-image: url(../img/sx.png);
+          background-size: contain;
+          &:hover{
+            cursor: pointer;
+            background-image: url(../img/sxhover.png);
+          }
+        }
+      .s_s{
+        position: relative;
+        input{
+          padding: 7px  10px;
+          border:0px;
+          width:180px;
+          border-radius: 2px;
+          font-size: 10px;
+          outline: none;
+        }
+        .ss_btn{
+          position: absolute;
+          right:-38px;
+          top:0;
+          width:28px;
+          height:28px;
+          display: inline;
+          border-radius: 2px;
+          background-size: contain;
+          background-color: #fff;
+          background-repeat: no-repeat;
+          background-image: url("../img/sou.png");
+          &:hover{
+            cursor: pointer;
+            background-image: url("../img/souhover.png");
+          }
+        }
+      }
+
+    }
+    .game{
+      float: right;
+    }
+  }
+}
+.mid_top{
+     width:100%;
+     height:7%;
+   }
+.middle{
+  width:100%;
+  height:83%;
+  .left{
+    width:14%;
+    float:left;
+    height:100%;
+    h3{
+      text-indent: 1em;
+      margin-top: 10px;
+      color:#9f9f9f;
+      font-size: 12px;
+      line-height: 23px;
+    }
+    ul{
+      li{
+        color:#000000;
+        font-size: 13px;
+        text-indent: 1em;
+        line-height: 26px;
+        color:#ccc;
+        &:hover{
+          background-color: rgba(0,0,0,0.5);
+          cursor:default;
+          color:#ffffff;
+        }
+        span{
+          display: inline-block;
+          vertical-align: middle;
+          width:15px;
+          height:15px;
+          margin-right: 10px;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+    }
+    }
+    $sbg:  "music",
+    "radio",
+    "MV",
+    "star",
+    "Podcast",
+    "peo",
+    "rand",
+    "ht",
+    "radio",
+    "download",
+    "computer",
+    "voice",
+    "mobie",
+    "love",
+    "disc";
+    @each $i in  $sbg{
+      span.#{$i}{
+        background-image: url("../img/" + $i + ".png" );
+        &:hover{
+          background-image: url("../img/" + $i + "(1).png" );
+        }
+      }
+      li:hover span.#{$i}{
+          background-image: url("../img/" + $i + "(1).png" );
+      }
+    }
+
+  }
+  .right{
+    width:86%;
+    height:100%;
+    background: #fff;
+    position: relative;
+    overflow:auto;
+    .m_r{
+      position: absolute;
+      top:0;
+      left:0;
+      width:100%;
+       .m_r_t{
+         width:100%;
+         padding-top: 30px;
+         background: #fff;
+         padding-bottom: 20px;
+         .require{
+           width:30%;
+           height:30px;
+           margin: 0 auto 30px;
+           border-radius: 3px;
+           border-top:1px solid rgba(58, 139, 189, 0.98);
+           border-left:1px solid rgba(58, 139, 189, 0.98);
+           a{
+             width:percentage(1/3) - 0.3% ;
+             display: block;
+             float: left;
+             border-bottom: 1px solid rgba(58, 139, 189, 0.98);
+             border-right: 1px solid rgba(58, 139, 189, 0.98);
+             line-height: 30px;
+             text-align: center;
+             color:#000;
+             &:hover{
+               cursor: default;
+               background: rgba(76, 151, 151, 0.25);
+             }
+             &:nth-child(1){
+               background:  rgba(58, 139, 189, 0.98);
+               color:#fff;
+               &:hover{
+                 background: rgba(58, 139, 189, 0.98);
+               }
+             }
+           }
+         }
+         .other{
+           width:80%;
+           padding:0 10px;
+           height:26px;
+           .other_left{
+             float: left;
+             width:25%;
+             height:26px;
+             div{
+               float: left;
+               margin:0 5px;
+               height:24px;
+               padding: 0 5px;
+               border-radius: 3px;
+               text-align: center;
+               border: 1px solid #ccc;
+               line-height: 24px;
+               font-size: 13px;
+               &:hover{
+                 cursor: default;
+                 background:rgba(58,139,189,0.12);
+               }
+               &:nth-child(1){
+                 background: rgba(58, 139, 189, 0.98);
+                 color:white;
+                 font-weight: bold;
+                 &:hover{
+                   background: rgba(58, 139, 189, 0.98);
+                 }
+               }
+             }
+           }
+         }
+       }
+      .m_r_m{
+        width:98%;
+        margin: 0 1%;
+        background: #eeeeee;
+        height:25px;
+        color:#999;
+        border-bottom: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+        ul{
+          width:100%;
+          height:100%;
+          text-align: justify;
+          li{
+            display: inline-block;
+            width:percentage(1/4) - 5% ;
+            height:100%;
+            padding-left: 5%;
+            font-size: 12px;
+            line-height:25px;
+            float:left;
+          }
+          &::after{
+            content:"";
+            width:100px;
+            height:0px;
+            display: inline-block;
+            float: left;
+            line-height: 0px;
+            font-size: 0px;
+          }
+        }
+      }
+      .m_r_b{
+       width:98%; ;
+       margin:0 1%;
+        .song_id{
+          li{
+            width:100%;
+            height:30px;
+            font-size: 13px;
+            color:#000000;
+            line-height: 30px;
+            transition: all ease .5s;
+            span{
+              width:percentage(1/4) - 5% ;
+              height:100%;
+              padding-left: 5%;
+              display: inline-block;
+              float: left;
+              color:#666;
+              &:nth-child(1){
+                color:#999;
+              }
+            }
+            &::after{
+              content: "";
+              height:0px;
+              display: inline-block;
+              font-size: 0;
+              line-height: 0;
+              width: 100%;
+            }
+            &:hover{
+              background: #eee;
+              cursor: pointer;
+            }
+            &.now{
+              background: #eee;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+.bottom{
+  width:100%;
+  height:10%;
+  position: fixed;
+  bottom:0;
+  left:0;
+  background: #000000;
+  .b_l{
+    width:14%;
+    height:100%;
+    float: left;
+    div{
+      float: left;
+      margin-top: 12px;
+      margin-left: 20px;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    .up{
+      width:30px;
+      height:30px;
+      margin-top: 17px;
+      background-size: contain;
+      background-image: url("../img/up.png");
+      background-repeat: no-repeat;
+      &:hover{
+        background-image: url("../img/uphover.png");
+      }
+    }
+    .play{
+      width:40px;
+      height:40px;
+      background-size: contain;
+      background-image: url("../img/play.png");
+      background-repeat: no-repeat;
+      &:hover{
+        background-image: url("../img/playhover.png");
+      }
+      &.active{
+        background-image: url("../img/pause1.png");
+      }
+    }
+    .down{
+      margin-top: 17px;
+      width:30px;
+      height:30px;
+      background-size: contain;
+      background-image: url("../img/down.png");
+      background-repeat: no-repeat;
+      &:hover{
+        background-image: url("../img/downhover.png");
+      }
+    }
+  }
+  .b_r{
+     width:86%;
+     height:100%;
+     float: right;
+    .b_r-middle{
+      width:65%;
+      height:100%;
+      float: left;
+      margin-left: 70px;
+      .b_r-tx{
+        height:100%;
+        width:70px;
+        background-size:cover;
+        background-repeat: no-repeat;
+        float: left;
+        transition: all ease .5s;
+        &:hover{
+          cursor: pointer;
+        }
+        .b_r_tx_mask{
+          width:100%;
+          height:100%;
+          background: rgba(0, 0, 0, 0.39);
+          background-image: url(../img/open.png);
+          background-size:50%;
+          background-repeat: no-repeat;
+          background-position: center center;
+          &.close{
+            background-image: url(../img/close.png);
+          }
+        }
+      }
+      .b_r-time{
+        width:80%;
+        height:100%;
+        float: right;
+        .song_name{
+          font-size: 12px;
+          color:#fff;
+          text-align: center;
+          line-height: 35px;
+        }
+        .song-pro{
+          width:100%;
+          margin:0 auto;
+          height:20px;
+          &>div{
+           margin:0 10px;
+            float:left;
+          }
+          .current,.all-time{
+            width:9%;
+            text-align: center;
+            height:20px;
+            color:#fff;
+            font-size: 12px;
+            line-height: 20px;
+          }
+          .time_pro{
+            width:70%;
+            height:4px;
+            border-radius: 2px;
+            background:#ccc;
+            margin-top: 8px;
+            &:hover{
+              cursor:pointer;
+            }
+            .time_current{
+              float: left;
+              width:0px;
+              border-radius: 2px;
+              height:100%;
+              background:#900356;
+            }
+            .time-tit{
+              float: left;
+              width:8px;
+              height:8px;
+              background:#fff;
+              border-radius: 50%;
+              box-shadow:0 0 2px #ccc;
+              margin-top: -2px;
+              position: relative;
+              &:hover{
+                cursor:pointer;
+              }
+              .time_ncir{
+                width:4px;
+                height:4px;
+                background: rgba(149, 149, 149, 0.43);
+                position: absolute;
+                top:0;
+                left:0;
+                right:0;
+                bottom:0;
+                box-shadow: 0 0 1px #eee;
+                margin:auto;
+                border-radius: 50%;
+              }
+            }
+            &:hover .time-tit{
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    .b_x-icon{
+         width:15%;
+         height:100%;
+         float: right;
+         background: #4a619a;
+       .voice{
+         width:20px;
+         height:20px;
+         float: left;
+         margin: 15% 0px 0 20px;
+         background: #ffffff;
+         background:url("../img/voice.png") no-repeat;
+         background-size: cover;
+         position: relative;
+         &.quite{
+           background-image:url(../img/quite.png);
+         }
+         .vo_mask{
+           width:100%;
+           height:104px;
+           display: none;
+           position: absolute;
+           top:0;
+           bottom:20px;
+           left:0;
+           right:0;
+           margin:0 auto;
+           margin-top: -105px;
+           background: rgb(0, 0, 0);
+           border: 1px solid #222;
+           border-radius: 2px;
+           .vo_pro{
+             width:4px;
+             background: #fff;
+             height:100px;
+             margin: 2px auto;
+             position: relative;
+             .vo_intr{
+               position: absolute;
+               width:4px;
+               background: red;
+               left:0;
+               bottom:0;
+               .vo_tit{
+                 width:8px;
+                 height:8px;
+                 border-radius: 50%;
+                 background: rgb(255, 255, 255);
+                 box-shadow: 0 0 1px #486326;
+                 margin-left: -2px;
+               }
+               .vo_now{
+                 width:4px;
+                 height:20px;
+                 background: #f4ff53;
+                 box-shadow:0 0 2px  aliceblue;
+               }
+             }
+
+           }
+         }
+         &:hover{
+           background-image:url("../img/voice(1).png");
+           cursor: pointer;
+         }
+       }
+     }
+
+  }
+}
+.mask{
+    position: absolute;
+    bottom:10%;
+    left:0;
+    width:100%;
+    height:90%;
+    background: #000;
+    display: none;
+    background-repeat: no-repeat;
+  background-size: cover;
+  .gecimask{
+    width:100%;
+    height:100%;
+    position: relative;
+    background: rgba(198, 198, 198, 0.38);
+    .geci{
+      height:80%;
+      overflow: hidden;
+      position: absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0px;
+      margin:auto;
+      li{
+        min-height: 30px;
+        text-align: center;
+        line-height: 30px;
+        font-size: 15px;
+        text-space: 1px;
+        font-weight: bold;
+        color:#eee;
+        transition: all ease .5s;
+        &.nowTime{
+          line-height: 50px;
+          font-size: 25px;
+          color:#fff;
+        }
+      }
+    }
+  }
+}
